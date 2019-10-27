@@ -10,6 +10,11 @@ $(function(){
     $("#btn-reiniciar").click(reiniciaJogo);
 });
 
+function atualizaTempoInicial(tempo) {
+    tempoInicial = tempo;
+    $("#tempo-digitacao").text(tempo);
+}
+
 function atualizaTamanhoFrase() {
     var frase = $(".frase").text();
     var numPalavras = frase.split(" ").length;
@@ -30,8 +35,8 @@ function inicializaContadores() {
 }
 
 function inicializaCronometro() {
-    var tempoRestante = $("#tempo-digitacao").text();
     campo.one("focus", function(){
+    var tempoRestante = $("#tempo-digitacao").text();
     var cronometroId = setInterval(function(){
         tempoRestante--;
         $("#tempo-digitacao").text(tempoRestante);
@@ -50,8 +55,8 @@ function finaliaJogo() {
 }
 
 function inicializaMarcadores() {
+    campo.on("input", function(){
     var frase = $(".frase").text();
-campo.on("input", function(){
     var digitado = campo.val();
     var comparavel = frase.substr(0, digitado.length);
     if (digitado == comparavel){
@@ -61,12 +66,8 @@ campo.on("input", function(){
         campo.addClass("borda-vermelha");
         campo.removeClass("borda-verde");
     }
-
 });
 }
-
-
-
 
 function reiniciaJogo(params) {
     campo.attr("disabled", false);
