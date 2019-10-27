@@ -24,7 +24,6 @@ function atualizaTamanhoFrase() {
 }
 
 function inicializaContadores() {
-
     campo.on("input", function(){
     var conteudo = campo.val();
     var qtdPalavras = conteudo.split(/\S+/).length - 1;
@@ -49,9 +48,9 @@ function inicializaCronometro() {
 }
 
 function finaliaJogo() {
+    inserePlacar();
     campo.attr("disabled", true);
     campo.toggleClass("campo-desativado");
-    inserePlacar();
 }
 
 function inicializaMarcadores() {
