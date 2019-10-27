@@ -19,7 +19,7 @@
                     <span id="tamanho-frase">5</span> palavras</li>
                 <li>
                     <i class="small material-icons icones">query_builder</i>
-                    <span id="tempo-digitacao">3</span> segundos</li>
+                    <span id="tempo-digitacao">5</span> segundos</li>
             </ul>
          
             <textarea class="campo-digitacao" rows="8" cols="40"></textarea>
@@ -29,16 +29,35 @@
            
          
          <ul class="center">
-         
              <li><span id="contador-caracteres">0</span> caracteres</li>
              <li><span id="contador-palavras">0</span> palavras</li>
-         
          </ul>
+
+         <section class="placar">
+            <h3 class="center">placar</h3>
+            <table class="centered bordered">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>No. de palavras</th>
+                        <th>Remover</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Phellipe</td>
+                        <td>10</td>
+                        <td><a class="botao-remover" href="#"><i class="small material-icons icones">delete_forever</i></a></td>
+                    </tr>
+                </tbody>
+            </table>
+         </section>
 
     </div>
 
    <script src="js/jquery.js"></script>
    <script src="js/main.js"></script>
+   <script src="js/placar.js"></script>
 
 </body>
 </html>

@@ -36,32 +36,35 @@ function inicializaCronometro() {
         tempoRestante--;
         $("#tempo-digitacao").text(tempoRestante);
         if(tempoRestante < 1){
-        campo.attr("disabled", true);
         clearInterval(cronometroId);
-        campo.toggleClass("campo-desativado");
+        finaliaJogo();
         }
     }, 1000);
 });
 }
 
+function finaliaJogo() {
+    campo.attr("disabled", true);
+    campo.toggleClass("campo-desativado");
+    inserePlacar();
+}
 
 function inicializaMarcadores() {
     var frase = $(".frase").text();
 campo.on("input", function(){
     var digitado = campo.val();
     var comparavel = frase.substr(0, digitado.length);
-    console.log("Digitado: " + digitado);
-    console.log("Frase C.: " + comparavel);
     if (digitado == comparavel){
-        campo.toggleClass("borda-verde");
+        campo.addClass("borda-verde");
+        campo.removeClass("borda-vermelha");
     } else{
-        campo.toggleClass("borda-vermelha");
+        campo.addClass("borda-vermelha");
+        campo.removeClass("borda-verde");
     }
 
-    console.log(digitado);
-    console.log(frase);
 });
 }
+
 
 
 
