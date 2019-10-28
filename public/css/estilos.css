@@ -42,5 +42,9 @@ body{
 }
 
 #frase-id{
-    width: 30px;
+    width: 50px;
+}
+
+#btn-sync{
+    float: right;
 }
