@@ -42,7 +42,12 @@ body{
 }
 
 #frase-id{
-    width: 50px;
+    width: 62px;
+}
+
+.selectize-input{
+    width: 300px;
+    vertical-align: middle;
 }
 
 #btn-sync{

@@ -5,6 +5,8 @@
     <title>Alura Typer</title>
     <link rel="stylesheet" href="css/libs/materialize.min.css">
     <link rel="stylesheet" href="css/libs/google-fonts.css">
+    <link rel="stylesheet" href="css/libs/selectize.default.css">
+    <link rel="stylesheet" href="css/libs/tooltipster.bundle.min.css">
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
@@ -36,7 +38,12 @@
                     <a id="btn-frase" class="btn-floating btn-large waves-effect waves-light blue"><i class="material-icons">shuffle</i></a>
                     <a id="btn-frase-id" class="btn-floating btn-large waves-effect waves-light cyan"><i class="material-icons">search</i></a>
                     <input type="number" id="frase-id" min="0">
-                    <a id="btn-sync" class="btn-floating btn-large waves-effect waves-light amber"><i class="material-icons">sync</i></a>
+                    <a id="btn-sync" class="btn-floating btn-large waves-effect waves-light amber tooltip" title="Sincronizado com sucesso!"><i class="material-icons">sync</i></a>
+                        <div class="select-usuarios">
+                            <select id="usuarios">
+                                <option value=""></option>
+                            </select>
+                        </div>
             </div>
            
          
@@ -46,7 +53,7 @@
          </ul>
 
          <section class="placar">
-            <h3 class="center">placar</h3>
+            <h3 class="center">PLACAR</h3>
             <table class="centered bordered">
                 <thead>
                     <tr>
@@ -66,6 +73,8 @@
    <script src="js/main.js"></script>
    <script src="js/placar.js"></script>
    <script src="js/frase.js"></script>
+   <script src="js/selectize.js"></script>
+   <script src="js/tooltipster.bundle.min.js"></script>
 
 </body>
 </html>

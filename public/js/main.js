@@ -9,6 +9,13 @@ $(function(){
     inicializaMarcadores();
     $("#btn-reiniciar").click(reiniciaJogo);
     atualizaPlacar();
+    $("#usuarios").selectize({
+        create: true,
+        sortField: 'text'
+    });
+    $(".tooltip").tooltipster({
+        trigger: 'custom'
+    });
 });
 
 function atualizaTempoInicial(tempo) {
